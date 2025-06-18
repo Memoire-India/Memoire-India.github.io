@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mémoire Photos - Wedding Photography</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper.js for Carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        /* Custom Font-Family */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Basic smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom Swiper Carousel Styles */
+        .swiper-container {
+            width: 100%;
+            height: 600px; /* Adjusted for landscape photos */
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #ffffff; /* White arrows */
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-black shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home">
+                <!-- IMPORTANT: Replace this placeholder with the actual path to your logo -->
+                <img src="https://i.imgur.com/aFbjJ72.png" alt="Mémoire Photos Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/200x50/000/fff?text=M%C3%A9moire';">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#portfolio" class="text-gray-300 hover:text-white font-medium">Features</a>
+                <a href="#about" class="text-gray-300 hover:text-white font-medium">About</a>
+                <a href="#videos" class="text-gray-300 hover:text-white font-medium">Photos & Films</a>
+                <a href="#contact" class="bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-gray-700 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-black">
+            <a href="#portfolio" class="block py-2 text-gray-300 hover:text-white">Features</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="#videos" class="block py-2 text-gray-300 hover:text-white">Photos & Films</a>
+            <a href="#contact" class="block mt-2 bg-gray-800 text-white py-2 px-4 rounded-full text-center hover:bg-gray-700 transition duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center text-center bg-white text-gray-800">
+            <div class="relative z-10 p-6">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight">Capturing Your Cherished Moments</h1>
+                <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">Timeless wedding photography by team Mémoire. We turn fleeting moments into lifelong memories and visual stories.</p>
+                <a href="#portfolio" class="mt-8 inline-block bg-gray-800 text-white py-3 px-8 rounded-full font-semibold text-lg hover:bg-gray-700 transition duration-300">View Our Work</a>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto">A collection of stories we've had the honor of telling. Each photo is a testament to love, joy, and unforgettable beginnings.</p>
+                <!-- Swiper Carousel -->
+                <div class="swiper-container mySwiper max-w-5xl mx-auto">
+                    <div class="swiper-wrapper">
+                        <!-- Replace these with your actual photos -->
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Wedding Photo 1" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/e2e8f0/333?text=Wedding+Photo+1';"></div>
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/1779439/pexels-photo-1779439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Wedding Photo 2" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/dbeafe/333?text=Wedding+Photo+2';"></div>
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/3299386/pexels-photo-3299386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Wedding Photo 3" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/fee2e2/333?text=Wedding+Photo+3';"></div>
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/1312389/pexels-photo-1312389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Wedding Photo 4" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/dcfce7/333?text=Wedding+Photo+4';"></div>
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/2085739/pexels-photo-2085739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Wedding Photo 5" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/f3e8ff/333?text=Wedding+Photo+5';"></div>
+                        <div class="swiper-slide"><img src="https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Wedding Photo 6" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/fef9c3/333?text=Wedding+Photo+6';"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination mt-4 relative"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mémoire Photos Team" class="rounded-lg shadow-xl" onerror="this.onerror=null;this.src='https://placehold.co/800x600/333/fff?text=Our+Team';">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl font-bold mb-4">About Us</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">We are Memoire, an Ahmedabad-based wedding photography and videography agency run by a team of creative professionals. With over 15 years of experience, we are dedicated hobbyists driven by creative pursuit and a passion for capturing beautiful moments and visual storytelling.</p>
+                    <p class="text-gray-600 leading-relaxed">We cater to a niche clientele in Ahmedabad, Vadodara, Anand, Nadiad, Surat, Rajkot, and surrounding areas, undertaking a select number of weddings each winter season. This includes destination weddings in scenic locations like Udaipur and Goa, as well as projects across India and internationally. You can find us on Instagram and YouTube for a glimpse into our work and to get in touch!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video/Films Section -->
+        <section id="videos" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-2">Our Wedding Photos & Films</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto">Sometimes, a moving picture tells the story best. Experience the emotion, the laughter, and the love in motion.</p>
+                <!-- YouTube Playlists Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <!-- Playlist 1 -->
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-xl overflow-hidden">
+                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLX2S-wHT_iweKyQ_Tqu24GUXzqeMthvQH" title="Wedding Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                    <!-- Playlist 2 -->
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-xl overflow-hidden">
+                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLX2S-wHT_iwdZGPbgqH5XoxJj-wAqsIHQ" title="Pre-Wedding Films" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                    <!-- Playlist 3 -->
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-xl overflow-hidden">
+                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLX2S-wHT_iwd4cXSYpISiCeDWnaeTKp7a" title="Cinematic Trailers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                    <!-- Playlist 4 -->
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-xl overflow-hidden">
+                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLX2S-wHT_iwd-ueS-cuOp42naK0uTlpqt" title="Client Testimonials" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-300 mb-10 max-w-xl mx-auto">We'd love to hear from you. Reach out via Instagram for a quick chat, or send us an email with your wedding details to check our availability and receive a custom quote.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <!-- Instagram DM Link -->
+                    <a href="https://ig.me/m/memoire.photos" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 py-3 px-6 rounded-full font-semibold text-lg hover:bg-gray-200 transition duration-300 flex items-center gap-3">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c-4.01.05-5.462.17-7.394.986C2.923 3.82 2 5.05 2 7.685v8.63c0 2.635.923 3.865 2.921 4.698 1.932.816 3.384.936 7.394.986 4.01-.05 5.462-.17 7.394-.986 2.001-.832 2.921-2.062 2.921-4.698v-8.63c0-2.635-.92-3.865-2.921-4.698C17.777 2.17 16.325 2.05 12.315 2zm-1.02 1.885h2.15c3.71.05 4.88.16 6.51.79 1.45.56 2.14 1.25 2.14 2.7v8.63c0 1.45-.69 2.14-2.14 2.7-1.63.63-2.8.74-6.51.79h-2.15c-3.71-.05-4.88-.16-6.51-.79-1.45-.56-2.14-1.25-2.14-2.7v-8.63c0-1.45.69-2.14 2.14-2.7 1.63-.63 2.8-.74 6.51-.79zM12 7.182a4.818 4.818 0 100 9.636 4.818 4.818 0 000-9.636zm0 7.752a2.934 2.934 0 110-5.868 2.934 2.934 0 010 5.868zm4.685-7.952a1.14 1.14 0 100-2.28 1.14 1.14 0 000 2.28z" clip-rule="evenodd"></path></svg>
+                        <span>DM on Instagram</span>
+                    </a>
+                    <!-- Email Link -->
+                    <a href="mailto:writetomemoire@gmail.com" class="bg-gray-700 text-white py-3 px-6 rounded-full font-semibold text-lg hover:bg-gray-600 transition duration-300 border border-gray-500 flex items-center gap-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span>writetomemoire@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Social Media Icons -->
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.instagram.com/memoire.photos/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c-4.01.05-5.462.17-7.394.986C2.923 3.82 2 5.05 2 7.685v8.63c0 2.635.923 3.865 2.921 4.698 1.932.816 3.384.936 7.394.986 4.01-.05 5.462-.17 7.394-.986 2.001-.832 2.921-2.062 2.921-4.698v-8.63c0-2.635-.92-3.865-2.921-4.698C17.777 2.17 16.325 2.05 12.315 2zm-1.02 1.885h2.15c3.71.05 4.88.16 6.51.79 1.45.56 2.14 1.25 2.14 2.7v8.63c0 1.45-.69 2.14-2.14 2.7-1.63.63-2.8.74-6.51.79h-2.15c-3.71-.05-4.88-.16-6.51-.79-1.45-.56-2.14-1.25-2.14-2.7v-8.63c0-1.45.69-2.14 2.14-2.7 1.63-.63 2.8-.74 6.51-.79zM12 7.182a4.818 4.818 0 100 9.636 4.818 4.818 0 000-9.636zm0 7.752a2.934 2.934 0 110-5.868 2.934 2.934 0 010 5.868zm4.685-7.952a1.14 1.14 0 100-2.28 1.14 1.14 0 000 2.28z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="https://wa.me/916351932589" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300"> <!-- Replace with your WhatsApp number -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.46 3.48 1.32 4.94L2 22l5.25-1.38c1.41.79 3.02 1.22 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm4.83 13.5c-.27.42-1.42 1.3-1.65 1.3-.23 0-.46-.07-.76-.22-.3-.15-1.28-.59-2.43-1.48-1.15-.89-1.92-1.99-2.15-2.33-.23-.34-.02-.53.14-.7.16-.17.34-.42.49-.59.15-.17.2-.27.27-.46s.04-.37-.04-.54c-.08-.17-.76-1.8-1.04-2.48s-.55-.59-.76-.59c-.21 0-.44.02-.66.02-.22 0-.58.07-.88.37-.3.3-.96.93-.96 2.27 0 1.34.99 2.64 1.13 2.81.14.17 1.91 2.95 4.63 4.1.6.26 1.09.43 1.47.54.38.11.72.09.99-.04.27-.13.88-.54 1-.9.12-.36.12-.68.08-.75-.04-.07-.15-.12-.32-.2z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@memoire.photos" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.78 22 12 22 12s0 3.22-.42 4.814a2.506 2.506 0 0 1-1.768 1.768C18.219 18.998 12 19 12 19s-6.219 0-7.812-.42A2.506 2.506 0 0 1 2.42 16.814C2 15.22 2 12 2 12s0-3.22.42-4.814a2.506 2.506 0 0 1 1.768-1.768C5.781 5.002 12 5 12 5s6.219 0 7.812.418zM9.57 15.113l6.205-3.113-6.205-3.113v6.226z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+            <p>&copy; <span id="year"></span> Mémoire Photos. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Designed with ❤️ for telling beautiful stories.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper.js Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // JavaScript to set the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Initialize Swiper Carousel
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, // Ensures only one slide is visible at a time
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
